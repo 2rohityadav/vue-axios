@@ -1,11 +1,14 @@
 <template>
   <div id="app">
-    {{msg}}
+    <h1>
+      {{msg}}
+    </h1>
+    {{status}}
   </div>
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
   name: 'app',
