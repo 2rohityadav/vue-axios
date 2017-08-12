@@ -1,6 +1,6 @@
 # vue-axios
 
-> yes
+> Vuejs can be combined with the axios HTTP library to retrieve data from an external REST API.
 
 ## Build Setup
 
