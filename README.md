@@ -2,20 +2,20 @@
 
 > Vuejs can be combined with the axios HTTP library to retrieve data from an external REST API.
 
-# How to install:
+## How to install vue-axios:
 
-*CommonJS:
+``` bash
+# install dependencies
 npm install --save axios vue-axios
 
-
-*And in your entry file:
-
+# And in your entry file
 import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
- 
-Vue.use(VueAxios, axios)
 
+# Use
+Vue.use(VueAxios, axios)
+```
 
 ## Build Setup
 
