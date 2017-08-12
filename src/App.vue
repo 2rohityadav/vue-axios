@@ -5,11 +5,33 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Vue-Axios'
+      msg: 'Vue-Axios',
+      status: ''
+    }
+  },
+  created () {
+    this.loadQuote();
+  },
+  methods: {
+    loadQuote () {
+      this.status = 'loading..!';
+      // axios getReq
+      var self = this;
+      // axios.get(`http://jsonplaceholder.typicode.com/posts`)
+      axios.get('http://ron-swanson-quotes.herokuapp.com/v2/quotes')
+      .then(function(response) {
+        console.log(response);
+        self.status = response.data[0];
+      })
+      .catch(function(error){
+        self.status = 'Something nesty happened...!' + error;
+      });
     }
   }
 }
